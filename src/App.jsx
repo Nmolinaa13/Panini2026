@@ -50,11 +50,12 @@ function buildStickers() {
   for (const [grp, teams] of Object.entries(GROUPS)) {
     for (const team of teams) {
       all.push({ id: `${team}-1`, group: grp, team, label: "Escudo", type: "escudo" });
-      all.push({ id: `${team}-2`, group: grp, team, label: "Equipo", type: "equipo" });
-      for (let j = 3; j <= 20; j++) {
-        all.push({ id: `${team}-${j}`, group: grp, team, label: `Jugador ${j - 2}`, type: "jugador" });
-      }
-    }
+for (let j = 2; j <= 12; j++) {
+  all.push({ id: `${team}-${j}`, group: grp, team, label: `Jugador ${j - 1}`, type: "jugador" });
+}
+all.push({ id: `${team}-13`, group: grp, team, label: "Equipo", type: "equipo" });
+for (let j = 14; j <= 20; j++) {
+  all.push({ id: `${team}-${j}`, group: grp, team, label: `Jugador ${j - 2}`, type: "jugador" });
   }
   for (let i = 1; i <= 14; i++) {
     all.push({ id: `CC-${i}`, group: "CC", team: "CC", label: `Coca-Cola ${i}`, type: "coca" });
