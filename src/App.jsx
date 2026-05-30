@@ -146,17 +146,17 @@ function ProgressBar({ pct, color = "#22c55e", height = 5 }) {
 }
 
 // Chip grande y optimizado para móvil
-// Muestra solo el número en negrita, y etiqueta ESC / FOT solo para esas dos láminas
+// Muestra solo el número en negrita, y etiqueta 🛡️ / 📸 solo para esas dos láminas
 // Con lámina: chip + botón − grande y separado para no confundir toques
 function Chip({ sticker, count, onAdd, onRemove }) {
   const has = count >= 1;
   const rep = count > 1;
   const color = GROUP_COLORS[sticker.group] || "#64748b";
   const num = sticker.id.replace(sticker.team, "");
-  const subLabel = sticker.type === "escudo" ? "ESC"
-    : sticker.type === "equipo" ? "FOT"
+  const subLabel = sticker.type === "escudo" ? "🛡️"
+    : sticker.type === "equipo" ? "📸"
     : sticker.type === "portada" ? "PRT"
-    : sticker.type === "coca" ? "CC"
+    : sticker.type === "coca" ? "CC🥤"
     : sticker.type === "especial" ? "★"
     : null;
 
